@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Fase1.css') }}">
+    <title>Fase 1</title>
+
+</head>
+<body>
+    <header class="header">
+        <h1>Clasificación de riesgos de enfermedades respiratorias en adultos mayores en Zipaquirá</h1>
+    </header>
+     
+    <div class="container">
+        
+        <div id="problema" class="section">
+            <h2>Problema</h2>
+            <p>En Zipaquirá, los adultos mayores representan un grupo vulnerable ante enfermedades respiratorias agudas y crónicas, debido a factores como contaminación ambiental, condiciones de vivienda precarias, y comorbilidades asociadas a la edad. Actualmente, los centros de salud carecen de herramientas analíticas predictivas que permitan clasificar a esta población según su nivel de riesgo y priorizar intervenciones preventivas.</p>
+            
+            <p>Este proyecto utiliza machine learning con modelos de clasificación, bajo la metodología CRISP-ML(Q) para:</p>
+            <ol>
+                <li>Identificar adultos mayores con mayor probabilidad de desarrollar enfermedades como EPOC, neumonía o exacerbaciones de asma.</li>
+                <li>Priorizar intervenciones sanitarias dirigidas a grupos de alto riesgo, optimizando recursos en centros de salud locales.</li>
+                <li>Reducir hospitalizaciones y mejorar la atención preventiva a los adultos mayores.</li>
+            </ol>
+        </div>
+
+        <div id="ods" class="section">
+            <h2>ODS relacionado</h2>
+            <p><strong>ODS 3: Salud y Bienestar</strong></p>
+            <p>Garantizar una vida sana y promover el bienestar para todos en todas las edades, específicamente en la meta 3.8 sobre cobertura sanitaria universal y servicios esenciales de salud de calidad.</p>
+        </div>
+
+        <div id="objetivo" class="section">
+            <h2>Objetivo</h2>
+            <p>Desarrollar un modelo de clasificación capaz de identificar adultos mayores con alto, medio o bajo riesgo de enfermedades respiratorias, a partir de variables clínicas, ambientales y sociales.</p>
+        </div>
+
+        <div class="section">
+            <h2>Preguntas claves</h2>
+            <ol>
+                <li>¿Qué factores contribuyen al riesgo?</li>
+                <li>¿Cuáles son los adultos mayores con mayor probabilidad de complicaciones?</li>
+                <li>¿Cómo priorizar los pacientes en función del nivel de riesgo?</li>
+            </ol>
+        </div>
+
+        <div id="datos" class="section">
+            <h2>Datos</h2>
+            <p>Para el análisis y clasificación de los pacientes se hace necesario de datos del paciente como edad, sexo, antecedentes médicos y uso de tabaco y leña, como datos de factor ambiental se requiere la calidad del aire del sector de residencia o el de la ciudad en general. También una caracterización socioeconómica con datos como tipo de vivienda y nivel socioeconómico y la frecuencia de visitas medicas por motivo de afecciones respiratorias.</p>
+            
+            <h3>Análisis de viabilidad</h3>
+            <p>Se dispone de fuentes confiables como historiales clínicos, estaciones meteorológicas y encuestas locales, se alinea con políticas de salud pública de Zipaquirá y puede ser apoyado por EPS y la Secretaría de Salud, facilitando su integración en programas preventivos se pueden garantizar el anonimato y el consentimiento informado, cumpliendo con la Ley de Protección de Datos en Colombia. Para la aplicación del modelo se puede hacer uso de random forest usando herramientas gratuitas como Python y scikit-learn.</p>
+            
+            <div class="repository">
+                <strong>Repositorio del proyecto:</strong>
+                <a href="https://github.com/Mannurcia/ProyectoMLZipaquira" target="_blank">https://github.com/Mannurcia/ProyectoMLZipaquira</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Universidad de Cundinamarca - Extensión Chía | Todos los derechos reservados</p> 
+            <p>Desarrollado por: MANUEL FELIPE MURCIA SUÁREZ</p>
+        </div>
+    </div>
+</body>
+</html>
