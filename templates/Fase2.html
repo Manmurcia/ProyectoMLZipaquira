@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Fase2.css') }}">
-    <title>Document</title>
+    <title>Fase 2</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <h1>Fase 2: Ingeniería de Datos - Proyecto CRISP-ML</h1>
+    </header>
+
+    <div class="container">
+
+        <div id="proyecto" class="section">
+            <h2>Proyecto</h2>
+            <p><strong>Clasificación de Riesgo de Enfermedades Respiratorias en Adultos Mayores de Zipaquirá</strong></p>
+            <p>Esta fase corresponde al procesamiento y transformación de los datos utilizados para entrenar el modelo de clasificación. Se utilizó un conjunto de datos sintético generado con fines de prueba y desarrollo.</p>
+        </div>
+
+        <div id="dataset" class="section">
+            <h2>1. Generación del Dataset (Data Seed)</h2>
+            <p>Se creó un archivo llamado 'dataseed_respiratorio.csv' con 200 registros simulando adultos mayores de Zipaquirá. Las variables incluidas representan factores clínicos, ambientales y sociodemográficos relevantes para evaluar el riesgo respiratorio.</p>
+        </div>
+
+        <div id="variables" class="section">
+            <h2>2. Variables Utilizadas</h2>
+            <ul class="variable-list">
+                <li><strong>edad:</strong> Edad del adulto mayor (60 a 90 años)</li>
+                <li><strong>sexo:</strong> Masculino o Femenino</li>
+                <li><strong>comorbilidades:</strong> Presencia de enfermedades como Hipertensión o Diabetes</li>
+                <li><strong>uso_leña:</strong> Uso de leña como combustible (0 = No, 1 = Sí)</li>
+                <li><strong>tipo_vivienda:</strong> Condiciones de vivienda: Cerrada, Ventilada, Hacinada</li>
+                <li><strong>pm25:</strong> Contaminación ambiental en µg/m³</li>
+                <li><strong>consultas_respiratorias:</strong> Número de consultas médicas por afecciones respiratorias en el último año</li>
+                <li><strong>estrato:</strong> Nivel socioeconómico (1 a 3)</li>
+                <li><strong>actividad_fisica:</strong> Realiza actividad física semanalmente (0 = No, 1 = Sí)</li>
+                <li><strong>riesgo_respiratorio:</strong> Etiqueta objetivo: Bajo, Medio o Alto</li>
+            </ul>
+        </div>
+
+        <div id="procesamiento" class="section">
+            <h2>3. Limpieza y Transformación de los Datos</h2>
+            <p>Se validó que no existieran valores nulos ni inconsistencias. Se transformaron variables categóricas con codificación adecuada y se normalizaron las variables numéricas para garantizar compatibilidad con los algoritmos de aprendizaje automático.</p>
+            
+            <h3>4. Resultado</h3>
+            <p>El archivo final 'data_ready.csv' está preparado para su uso en la fase de modelado. El proceso completo está documentado en el script de preprocesamiento en Jupyter Notebook.</p>
+            
+            <p class="note">Esta fase fue asistida por ChatGPT (OpenAI) como apoyo en redacción y generación del dataset sintético.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Proyecto Zipaquirá. Todos los derechos reservados.</p>
+            <p>Desarrollado por: MANUEL FELIPE MURCIA SUÁREZ<br>
+            Universidad de Cundinamarca - Extensión Chía<br>
+            Ingeniería de Sistemas</p>
+        </div>
+    </div>
 </body>
 </html>
