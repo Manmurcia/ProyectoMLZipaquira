@@ -1,8 +1,9 @@
 import pandas as pd
 import random
+import os
 
-# Crear dataset sintético
-def generar_data_seed(n=100):
+def generar_data_seed(n=200, ruta_salida="ingenieria_datos/data/dataseed_respiratorio.csv"):
+    # Crear datos aleatorios
     data = {
         "edad": [random.randint(60, 90) for _ in range(n)],
         "sexo": [random.choice(["Masculino", "Femenino"]) for _ in range(n)],
@@ -15,7 +16,18 @@ def generar_data_seed(n=100):
         "actividad_fisica": [random.choice([0, 1]) for _ in range(n)],
         "riesgo_respiratorio": [random.choice(["Bajo", "Medio", "Alto"]) for _ in range(n)]
     }
-    return pd.DataFrame(data)
 
-df_seed = generar_data_seed(200)
-df_seed.to_csv("data_seed_respiratorio.csv", index=False)
+    df = pd.DataFrame(data)
+    
+    # Asegurar que el directorio existe
+    os.makedirs(os.path.dirname(ruta_salida), exist_ok=True)
+    
+    # Guardar con manejo de errores
+    try:
+        df.to_csv(ruta_salida, index=False)
+        return f"✅ Archivo guardado en: {os.path.abspath(ruta_salida)}"
+    except Exception as e:
+        return f"❌ Error al guardar: {e}"
+
+# Ejemplo de uso
+print(generar_data_seed())
