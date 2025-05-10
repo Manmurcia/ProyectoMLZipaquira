@@ -1,12 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Fase3.css') }}">
-    <title>Fase 3</title>
+    <title>Fase 3: Ingeniería del Modelo - Proyecto CRISP-ML</title>
 </head>
 <body>
-    
+    <header class="header">
+        <h1>Fase 3: Ingeniería del Modelo - Proyecto CRISP-ML</h1>
+    </header>
+
+    <div class="container">
+        
+        <div id="proyecto" class="section">
+            <h2>Proyecto</h2>
+            <p><strong>Clasificación de Riesgo de Enfermedades Respiratorias en Adultos Mayores de Zipaquirá</strong></p>
+            <p>En esta fase se selecciona, entrena, ajusta y valida el modelo de aprendizaje automático que clasificará a los adultos mayores según su riesgo de desarrollar enfermedades respiratorias.</p>
+        </div>
+
+        <div id="seleccion" class="section">
+            <h2>1. Selección del Modelo</h2>
+            <p>Se trata de un problema de clasificación multiclase (riesgo: Bajo, Medio o Alto). Se evaluarán los siguientes modelos:</p>
+            <ul class="model-list">
+                <li><strong>Random Forest:</strong> Alta precisión y tolerancia al ruido.</li>
+                <li><strong>XGBoost:</strong> Potente y eficiente.</li>
+                <li><strong>Regresión logística multiclase:</strong> Modelo base inicial.</li>
+                <li><strong>Árbol de decisión:</strong> Interpretabilidad sencilla.</li>
+            </ul>
+            <p>Se seleccionará el mejor en función del rendimiento y aplicabilidad.<br>
+                Para este caso se usara Random Forest por su biuen rendimiento en poblemas de clasificacion con datos tabulares, no necesita normalizar los datos y proporciona una metrica de importancia de variables util para interpretar</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Entrenamiento del Modelo</h2>
+            <p>Los datos se dividirán en conjunto de entrenamiento (80%) y prueba (20%) usando división estratificada para mantener el equilibrio de clases. Luego, el modelo será entrenado usando los datos preparados en la fase 2.</p>
+            
+            <h3>3. Ajuste de Hiperparámetros</h3>
+            <p>Se utilizará búsqueda en malla (Grid Search) para optimizar hiperparámetros como:</p>
+            <ul>
+                <li>Número de árboles (<code>n_estimators</code>)</li>
+                <li>Profundidad máxima (<code>max_depth</code>)</li>
+                <li>Tamaño mínimo de división (<code>min_samples_split</code>)</li>
+            </ul>
+            <p>Esto permitirá mejorar el rendimiento del modelo sin sobreajustar.</p>
+        </div>
+
+        <div id="validacion" class="section">
+            <h2>4. Validación del Modelo</h2>
+            <p>Se evaluará el desempeño del modelo usando métricas como:</p>
+            <div class="metric-list">
+                <ul>
+                    <li>Matriz de confusión</li>
+                    <li>Precisión</li>
+                    <li>Recall</li>
+                    <li>F1-score</li>
+                </ul>
+            </div>
+            <p>Estas métricas permitirán identificar qué tan bien clasifica cada nivel de riesgo.</p>
+            
+            <h3>5. Interpretación del Modelo</h3>
+            <p>Se analizará la importancia de las características predictoras para entender qué variables tienen mayor peso en la clasificación del riesgo respiratorio. Esto facilita la toma de decisiones por parte del personal de salud.</p>
+        </div>
+
+        <div class="section">
+            <h2>Resultado Esperado</h2>
+            <p>Al finalizar esta fase se tendrá un modelo entrenado, ajustado y validado, listo para ser implementado en un entorno de prueba o producción.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Proyecto Zipaquirá. Todos los derechos reservados.</p>
+            <p>Desarrollado por: MANUEL FELIPE MURCIA SUÁREZ<br>
+            Universidad de Cundinamarca - Extensión Chía<br>
+            Ingeniería de Sistemas</p>
+        </div>
+    </div>
 </body>
 </html>
