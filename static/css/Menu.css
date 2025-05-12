@@ -1,103 +1,96 @@
 /* Estilos generales */
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        /* Contenedor principal */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            flex: 1;
-        }
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
 
-        /* Header */
-        .header {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+/* Header */
+.header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
 
-        .header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
 
-        .header p {
-            font-size: 1.2rem;
-            margin-top: 0;
-        }
+/* Contenedor para menús paralelos */
+.menus-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 2rem;
+}
 
-        /* Contenedor para menús paralelos */
-        .menus-container {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 2rem;
-        }
+/* Menús de navegación */
+nav {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    flex: 1;
+}
 
-        /* Menús de navegación */
-        nav {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            padding: 1.5rem;
-            flex: 1;
-        }
+nav h2 {
+    color: #6a11cb;
+    border-bottom: 2px solid #2575fc;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
 
-        nav h2 {
-            color: #6a11cb;
-            border-bottom: 2px solid #2575fc;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-        }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+nav ul li {
+    margin-bottom: 0.8rem;
+}
 
-        nav ul li {
-            margin-bottom: 0.8rem;
-        }
+nav ul li:last-child {
+    margin-bottom: 0;
+}
 
-        nav ul li:last-child {
-            margin-bottom: 0;
-        }
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #6a11cb;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
 
-        nav ul li a {
-            display: block;
-            text-decoration: none;
-            color: #6a11cb;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 30px;
-            transition: all 0.3s;
-        }
+nav ul li a:hover {
+    background: #2575fc;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
 
-        nav ul li a:hover {
-            background: #2575fc;
-            color: white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        .footer {
-            background: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #6a11cb;
-            box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
-        }
+/* Footer */
+.footer {
+    background: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #6a11cb;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+}
