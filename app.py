@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from ingenieria_datos.creadordataseed import generar_data_seed
 from ingenieria_datos.limpieza_datos import limpiar_y_transformar_dataset
+from ModeloEntrenamiento import entrenar_modelo
 
 import re
 from datetime import datetime
@@ -21,7 +22,7 @@ def fase2():
 
 @app.route("/datos")
 def menu():
-    return render_template("datos.html")
+    return render_template("Datos.html")
 
 @app.route('/generar', methods=['POST'])
 def generar():
@@ -37,8 +38,18 @@ def procesar():
 def fase3():
     return render_template("Fase3.html")
 
-
-
+@app.route('/entrenar', methods=['GET', 'POST'])
+def entrenar():
+    if request.method == 'POST':
+        resultado = entrenar_modelo()
+        return render_template(
+            "Modelo.html",
+            mensaje=resultado["mensaje"],
+            mejores_parametros=resultado["mejores_parametros"],
+            reporte=resultado["reporte"],
+            matriz=resultado["matriz"]
+        )
+    return render_template("Modelo.html")
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Entrenamiento del Modelo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Modelo.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1>Clasificación de Riesgo Respiratorio en Adultos Mayores</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="form-section">
+            <form action="/entrenar" method="post">
+                <button type="submit">3️⃣ Entrenar Modelo y Ver Resultados</button>
+            </form>
+        </div>
+
+        {% if mensaje %}
+        <div class="resultados">
+            <h2>✅ {{ mensaje }}</h2>
+
+            <h3>📌 Mejores Parámetros:</h3>
+            <p>{{ mejores_parametros }}</p>
+
+            <h3>📋 Reporte de Clasificación:</h3>
+            <pre>{{ reporte }}</pre>
+
+            <h3>📊 Matriz de Confusión:</h3>
+            <pre>{{ matriz }}</pre>
+        </div>
+        {% endif %}
+
+        <a href="/" class="volver">⬅️ Volver al Menú</a>
+
+        <div class="footer">
+            <p>© 2025 Proyecto Zipaquirá. Todos los derechos reservados.</p>
+            <p>Desarrollado por: MANUEL FELIPE MURCIA SUÁREZ<br>
+            Universidad de Cundinamarca<br>
+            Ingeniería de Sistemas</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
