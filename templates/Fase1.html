@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Fase1.css') }}">
     <title>Fase 1</title>
-
 </head>
 <body>
     <header class="header">
@@ -16,52 +15,113 @@
 
         <div id="titulo" class="section">
             <h2>Clasificación de Riesgo de Enfermedades Respiratorias en Adultos Mayores de Zipaquirá</h2>
-            <p>Proyecto de Machine Learning - CRISP-ML</p>
+            <p>Proyecto de Machine Learning - CRISP-ML(Q)</p>
         </div>
         
+        <div id="justificacion" class="section">
+            <h2>Justificación</h2>
+            <p>
+                Las enfermedades respiratorias representan una de las principales causas de morbilidad y mortalidad en la población adulta mayor en Colombia. Los adultos mayores presentan una mayor vulnerabilidad frente a afecciones respiratorias debido a la presencia de comorbilidades crónicas y la exposición constante a factores ambientales nocivos, como la contaminación del aire y el uso doméstico de combustibles sólidos como la leña.
+            </p>
+            <p>
+                En el municipio de Zipaquirá, estas condiciones se ven agravadas en sectores rurales donde el acceso a servicios de salud es limitado y persiste el uso de métodos tradicionales de cocción. La región presenta eventos de contaminación atmosférica por material particulado (PM2.5) que pueden afectar severamente a personas con sistemas inmunes comprometidos. Además, reportes locales indican que aproximadamente el 23% de las consultas médicas en adultos mayores corresponden a afecciones respiratorias.
+            </p>
+            <p>
+                En este contexto, se plantea el uso de modelos de aprendizaje automático para clasificar y predecir el nivel de riesgo respiratorio en esta población, con el fin de aportar herramientas tecnológicas que puedan ser utilizadas en acciones preventivas por entidades de salud locales. Este enfoque contribuye al cumplimiento del Objetivo de Desarrollo Sostenible N.º 3: “Garantizar una vida sana y promover el bienestar para todos en todas las edades”.
+            </p>
+        </div>
+
         <div id="problema" class="section">
             <h2>Problema</h2>
-            <p>En Zipaquirá, los adultos mayores representan un grupo vulnerable ante enfermedades respiratorias agudas y crónicas, debido a factores como contaminación ambiental, condiciones de vivienda precarias, y comorbilidades asociadas a la edad. Actualmente, los centros de salud carecen de herramientas analíticas predictivas que permitan clasificar a esta población según su nivel de riesgo y priorizar intervenciones preventivas.</p>
-            
+            <p>En Zipaquirá, los adultos mayores representan un grupo vulnerable ante enfermedades respiratorias agudas y crónicas, debido a factores como contaminación ambiental, condiciones de vivienda precarias y comorbilidades asociadas a la edad. Actualmente, los centros de salud carecen de herramientas analíticas predictivas que permitan clasificar a esta población según su nivel de riesgo y priorizar intervenciones preventivas.</p>
             <p>Este proyecto utiliza machine learning con modelos de clasificación, bajo la metodología CRISP-ML(Q) para:</p>
-            <ol>
+            <ul>
                 <li>Identificar adultos mayores con mayor probabilidad de desarrollar enfermedades como EPOC, neumonía o exacerbaciones de asma.</li>
                 <li>Priorizar intervenciones sanitarias dirigidas a grupos de alto riesgo, optimizando recursos en centros de salud locales.</li>
                 <li>Reducir hospitalizaciones y mejorar la atención preventiva a los adultos mayores.</li>
-            </ol>
-        </div>
-
-        <div id="ods" class="section">
-            <h2>ODS relacionado</h2>
-            <p><strong>ODS 3: Salud y Bienestar</strong></p>
-            <p>Garantizar una vida sana y promover el bienestar para todos en todas las edades, específicamente en la meta 3.8 sobre cobertura sanitaria universal y servicios esenciales de salud de calidad.</p>
+            </ul>
         </div>
 
         <div id="objetivo" class="section">
-            <h2>Objetivo</h2>
-            <p>Desarrollar un modelo de clasificación capaz de identificar adultos mayores con alto, medio o bajo riesgo de enfermedades respiratorias, a partir de variables clínicas, ambientales y sociales.</p>
+            <h2>Objetivo General</h2>
+            <p>
+                Desarrollar un modelo de clasificación capaz de identificar adultos mayores con alto, medio o bajo riesgo de enfermedades respiratorias, a partir de variables clínicas, ambientales y sociales, para apoyar la toma de decisiones en salud pública.
+            </p>
         </div>
 
-        <div class="section">
-            <h2>Preguntas claves</h2>
+        <div id="objetivos-especificos" class="section">
+            <h2>Objetivos Específicos</h2>
+            <ul>
+                <li>Recolectar y sintetizar datos representativos de la población objetivo mediante técnicas de simulación y análisis documental.</li>
+                <li>Diseñar un conjunto de datos estructurado con variables relevantes como edad, comorbilidades, uso de leña, calidad del aire y condiciones de vivienda.</li>
+                <li>Aplicar procesos de limpieza, transformación y codificación de los datos para su uso en algoritmos de clasificación.</li>
+                <li>Entrenar y ajustar un modelo de clasificación supervisado utilizando Random Forest, con optimización de hiperparámetros mediante validación cruzada.</li>
+                <li>Evaluar el desempeño del modelo mediante métricas como precisión, recall, F1-score y matriz de confusión.</li>
+                <li>Implementar una interfaz web que permita la ejecución y visualización del modelo de forma accesible para usuarios técnicos y no técnicos.</li>
+            </ul>
+        </div>
+
+        <div id="preguntas-clave" class="section">
+            <h2>Preguntas Clave</h2>
             <ol>
-                <li>¿Qué factores contribuyen al riesgo?</li>
-                <li>¿Cuáles son los adultos mayores con mayor probabilidad de complicaciones?</li>
-                <li>¿Cómo priorizar los pacientes en función del nivel de riesgo?</li>
+                <li>¿Qué factores contribuyen al riesgo de enfermedades respiratorias en adultos mayores?</li>
+                <li>¿Cuáles son los adultos mayores con mayor probabilidad de complicaciones respiratorias?</li>
+                <li>¿Cómo priorizar los pacientes en función del nivel de riesgo para optimizar recursos sanitarios?</li>
             </ol>
         </div>
 
         <div id="datos" class="section">
             <h2>Datos</h2>
-            <p>Para el análisis y clasificación de los pacientes se hace necesario de datos del paciente como edad, sexo, antecedentes médicos y uso de tabaco y leña, como datos de factor ambiental se requiere la calidad del aire del sector de residencia o el de la ciudad en general. También una caracterización socioeconómica con datos como tipo de vivienda y nivel socioeconómico y la frecuencia de visitas medicas por motivo de afecciones respiratorias.</p>
-            
-            <h3>Análisis de viabilidad</h3>
-            <p>Se dispone de fuentes confiables como historiales clínicos, estaciones meteorológicas y encuestas locales, se alinea con políticas de salud pública de Zipaquirá y puede ser apoyado por EPS y la Secretaría de Salud, facilitando su integración en programas preventivos se pueden garantizar el anonimato y el consentimiento informado, cumpliendo con la Ley de Protección de Datos en Colombia. Para la aplicación del modelo se puede hacer uso de random forest usando herramientas gratuitas como Python y scikit-learn.</p>
-            
-            <div class="repository">
-                <strong>Repositorio del proyecto:</strong>
-                <a href="https://github.com/Manmurcia/ProyectoMLZipaquira" target="_blank">https://github.com/Manmurcia/ProyectoMLZipaquira</a>
-            </div>
+            <p>
+                Para el análisis y clasificación de los pacientes se requiere información clínica como edad, sexo, antecedentes médicos, uso de tabaco y leña; y datos ambientales como la calidad del aire del sector de residencia o de la ciudad en general. Además, se considera una caracterización socioeconómica que incluye tipo de vivienda, nivel socioeconómico y frecuencia de visitas médicas por afecciones respiratorias.
+            </p>
+
+            <h3>Análisis de Viabilidad</h3>
+            <p>
+                Se cuenta con fuentes confiables como historiales clínicos, estaciones meteorológicas y encuestas locales. El proyecto se alinea con las políticas de salud pública de Zipaquirá y puede ser apoyado por EPS y la Secretaría de Salud. Esto facilita su integración en programas preventivos, garantizando anonimato y consentimiento informado, conforme a la Ley de Protección de Datos en Colombia. Para la implementación del modelo, se empleará Random Forest utilizando herramientas gratuitas y accesibles como Python y la librería scikit-learn.
+            </p>
+
+        </div>
+
+        <div id="metodologia" class="section">
+            <h2>Metodología</h2>
+            <p>
+                Se adoptará la metodología CRISP-ML(Q) (Cross-Industry Standard Process for Machine Learning with Quality), que comprende las siguientes fases:
+            </p>
+            <ol>
+                <li>Entendimiento del negocio y los datos</li>
+                <li>Ingeniería de datos</li>
+                <li>Ingeniería del modelo</li>
+                <li>Evaluación del modelo</li>
+                <li>Despliegue</li>
+                <li>Monitoreo y mantenimiento</li>
+            </ol>
+            <p>
+                Esta metodología asegura la calidad, reproducibilidad y gobernanza en el desarrollo del proyecto.
+            </p>
+        </div>
+
+        <div id="ods" class="section">
+            <h2>ODS Relacionado</h2>
+            <p><strong>ODS 3: Salud y Bienestar</strong></p>
+            <p>
+                Garantizar una vida sana y promover el bienestar para todos en todas las edades, con especial énfasis en la meta 3.8, que busca la cobertura sanitaria universal y servicios esenciales de salud de calidad.
+            </p>
+        </div>
+
+        <div id="referencias" class="section">
+            <h2>Referencias</h2>
+            <ul>
+                <li>IDEAM. (2022). Boletín de calidad del aire: Cundinamarca. Instituto de Hidrología, Meteorología y Estudios Ambientales. <a href="https://www.ideam.gov.co" target="_blank">https://www.ideam.gov.co</a></li>
+                <li>Ministerio de Salud y Protección Social. (2023). Informe anual de enfermedades respiratorias en población mayor. <a href="https://www.minsalud.gov.co" target="_blank">https://www.minsalud.gov.co</a></li>
+                <li>Secretaría de Salud de Cundinamarca. (2023). Indicadores epidemiológicos 2022-2023. <a href="https://www.salud.cundinamarca.gov.co" target="_blank">https://www.salud.cundinamarca.gov.co</a></li>
+                <li>Universidad Nacional de Colombia. (2022). Factores asociados al riesgo respiratorio en adultos mayores en zonas semiurbanas de Cundinamarca. *Revista Colombiana de Salud Pública, 20*(2), 115–122.</li>
+            </ul>
+        </div>
+
+        <div class="repository">
+            <strong>Repositorio del proyecto:</strong>
+            <a href="https://github.com/Manmurcia/ProyectoMLZipaquira" target="_blank">https://github.com/Manmurcia/ProyectoMLZipaquira</a>
         </div>
 
         <a href="/" class="volver">⬅️ Volver al Menú</a>
