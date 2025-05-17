@@ -52,6 +52,11 @@ def crear_app():
                 matriz=resultado["matriz"]
             )
         return render_template("Modelo.html")
+    
+    @app.route("/fase4")
+    def fase2():
+        return render_template("Fase4.html")
+    
     return app
 
 if __name__ == '__main__':

@@ -1,0 +1,112 @@
+/* Estilos generales */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Estilos del header */
+        .header {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            padding: 1.5rem 0;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Estilos del menú */
+        nav {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #6a11cb;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #2575fc;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Estilos de contenido */
+        .section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: #6a11cb;
+            border-bottom: 2px solid #2575fc;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #6a11cb;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-list {
+            columns: 2;
+            column-gap: 2rem;
+        }
+
+        .highlight-box {
+            background: #e9f5ff;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #2575fc;
+            margin: 1rem 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #6a11cb;
+        }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Fase4.css') }}">
+    <title>Fase 4: Evaluación del Modelo - Proyecto CRISP-ML</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Fase 4: Evaluación del Modelo - Proyecto CRISP-ML</h1>
+    </header>
+
+    <div class="container">
+
+        <div id="proyecto" class="section">
+            <h2>Proyecto</h2>
+            <p><strong>Clasificación de Riesgo de Enfermedades Respiratorias en Adultos Mayores de Zipaquirá</strong></p>
+            <p>Esta fase busca medir y validar la efectividad y robustez del modelo predictivo desarrollado, asegurando que sus resultados sean confiables y útiles para la toma de decisiones clínicas y administrativas en el contexto de riesgo respiratorio en adultos mayores.</p>
+        </div>
+
+        <div id="metricas" class="section">
+            <h2>1. Métricas de Desempeño</h2>
+            <ul class="metric-list">
+                <li><strong>Accuracy:</strong> Exactitud general del modelo</li>
+                <li><strong>Precision:</strong> Capacidad de no clasificar falsos positivos</li>
+                <li><strong>Recall:</strong> Capacidad de encontrar todos los positivos</li>
+                <li><strong>F1-Score:</strong> Media armónica entre precisión y recall</li>
+                <li><strong>Matriz de Confusión:</strong> Visualización de aciertos y errores</li>
+                <li><strong>AUC-ROC:</strong> Área bajo la curva ROC (opcional)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Validación Cruzada</h2>
+            <p>Implementación de técnicas de validación cruzada (k-fold) para evaluar la generalización del modelo.</p>
+            <p>Evitar sobreajuste y garantizar estabilidad en diferentes conjuntos de datos.</p>
+            
+        </div>
+
+        <div class="section">
+            <h2>3. Análisis de Riesgos</h2>
+            <ul>
+                <li>Identificación de problemas que afectan el rendimiento: sobreajuste, subajuste y sesgos.</li>
+                <li>Evaluación de errores sistemáticos en subgrupos poblacionales.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Revisión con Expertos</h2>
+            <ul>
+                <li>Validación de resultados con especialistas en salud respiratoria.</li>
+                <li>Asegurar relevancia práctica y cumplimiento de requisitos clínicos.</li>
+            </ul>
+        </div>
+
+        <div id="resultados" class="section">
+            <h2>Resultados Esperados</h2>
+            <ul>
+                <li>Informe con métricas y análisis gráficos de desempeño.</li>
+                <li>Diagnóstico de riesgos y capacidad de generalización.</li>
+                <li>Retroalimentación para mejora del modelo.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Proyecto Zipaquirá. Todos los derechos reservados.</p>
+            <p>Desarrollado por: MANUEL FELIPE MURCIA SUÁREZ<br>
+            Universidad de Cundinamarca<br>
+            Ingeniería de Sistemas</p>
+        </div>
+    </div>
+</body>
+</html>
