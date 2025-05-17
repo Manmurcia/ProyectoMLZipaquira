@@ -52,7 +52,6 @@ def crear_app():
                 matriz=resultado["matriz"]
             )
         return render_template("Modelo.html")
-
     return app
 
 if __name__ == '__main__':
