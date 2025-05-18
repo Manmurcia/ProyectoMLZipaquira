@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación del Modelo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Evaluacion.css') }}">
+</head>
+<body>
+    
+    <header class="header">
+        <h1>Evaluación del Modelo de Clasificación de Riesgo Respiratorio</h1>
+    </header>
+
+    <div class="container">
+        <div class="grafica">
+            <h4>📋 Reporte de Clasificación</h4>
+            <pre>{{ reporte }}</pre>
+        </div>
+
+        <div class="grafica">
+            <h4>📊 Matriz de Confusión</h4>
+            <img src="{{ url_for('static', filename='img/matriz_confusion.png') }}" class="img-fluid">
+        </div>
+
+        <div class="grafica">
+            <h4>📌 Métricas por Clase</h4>
+            <img src="{{ url_for('static', filename='img/metricas_clase.png') }}" class="img-fluid">
+        </div>
+
+        <div class="grafica">
+            <h4>🔄 Validación Cruzada</h4>
+            <img src="{{ url_for('static', filename='img/validacion_cruzada.png') }}" class="img-fluid">
+        </div>
+
+        <div class="grafica">
+            <h4>🌳 Importancia de las Variables</h4>
+            <img src="{{ url_for('static', filename='img/importancia_variables.png') }}" class="img-fluid">
+        </div>
+
+        <a href="/" class="volver">⬅️ Volver al Menú</a>
+
+        <div class="footer">
+            <p>© 2025 Proyecto Zipaquirá. Todos los derechos reservados.</p>
+            <p>Desarrollado por: MANUEL FELIPE MURCIA SUÁREZ<br>
+            Universidad de Cundinamarca<br>
+            Ingeniería de Sistemas</p>
+        </div>
+    </div>
+
+</body>
+</html>

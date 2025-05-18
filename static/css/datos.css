@@ -52,19 +52,19 @@ button:hover {
 }
 
 /* Enlace de volver */
-        .volver {
-            display: inline-block;
-            margin-bottom: 2rem;
-            color: #6a11cb;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
+.volver {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
 
-        .volver:hover {
-            color: #2575fc;
-            transform: translateX(-5px);
-        }
+.volver:hover {
+    color: #2575fc;
+    transform: translateX(-5px);
+}
         
 .footer {
     text-align: center;

@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from ingenieria_datos.creadordataseed import generar_data_seed
 from ingenieria_datos.limpieza_datos import limpiar_y_transformar_dataset
 from ModeloEntrenamiento import entrenar_modelo
+from EvaluarModelo import evaluar_modelo
 
 import re
 from datetime import datetime
@@ -23,7 +24,7 @@ def crear_app():
         return render_template("Fase2.html")
 
     @app.route("/datos")
-    def menu():
+    def menu_datos():
         return render_template("Datos.html")
 
     @app.route('/generar', methods=['POST'])
@@ -54,8 +55,19 @@ def crear_app():
         return render_template("Modelo.html")
     
     @app.route("/fase4")
-    def fase2():
+    def fase4():
         return render_template("Fase4.html")
+    
+    @app.route('/evaluar')
+    def evaluar():
+        try:
+            resultados = evaluar_modelo()
+            return render_template(
+                "Evaluacion.html",
+                reporte=resultados["reporte_texto"]  # Solo el texto, las imágenes ya están en static/img/
+            )
+        except Exception as e:
+            return f"Error: {str(e)}", 500
     
     return app
 
