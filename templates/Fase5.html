@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 5: Despliegue del Modelo - Proyecto CRISP-ML</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Fase5.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Fase 5: Despliegue del Modelo - Proyecto CRISP-ML</h1>
+            <p>Clasificación de Riesgo de Enfermedades Respiratorias en Adultos Mayores de Zipaquirá</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h2>Proceso de Despliegue</h2>
+            <p>Esta fase final se enfoca en poner el modelo validado en funcionamiento real, garantizando su integración efectiva con los sistemas operativos de la organización, así como su uso seguro y eficiente por parte de los usuarios finales.</p>
+        </div>
+
+        <div class="card">
+            <h2>Implementación en Producción</h2>
+            <ul class="feature-list">
+                <li>El modelo entrenado y validado se integrará al entorno operativo mediante una API construida con Flask.</li>
+                <li>Se asegurará compatibilidad con los sistemas existentes y uso eficiente de recursos computacionales.</li>
+                <li>Se establecerán rutas como <code>/predecir</code> para permitir a los usuarios subir datos nuevos y recibir una predicción en tiempo real.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Documentación y Capacitación</h2>
+            <ul class="feature-list">
+                <li>Se desarrollarán manuales técnicos del modelo y del sistema implementado.</li>
+                <li>Se crearán instructivos para los usuarios del sistema, explicando:
+                    <ul class="feature-list">
+                        <li>Cómo interpretar los resultados</li>
+                        <li>Cómo alimentar nuevos datos</li>
+                    </ul>
+                </li>
+                <li>Se ofrecerán sesiones de formación al personal de salud que usará la herramienta.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Establecimiento de Protocolos</h2>
+            <p>Se definirán procedimientos para:</p>
+            
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <strong>Monitoreo periódico</strong> del desempeño del modelo en producción
+                </div>
+                <div class="protocol-card">
+                    <strong>Gestión de incidencias</strong> y errores inesperados
+                </div>
+                <div class="protocol-card">
+                    <strong>Recolección de retroalimentación</strong> por parte de usuarios finales
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h3>Herramientas MLOps</h3>
+                <p>Se considerará el uso de herramientas básicas como registros de predicciones, alertas y control de versiones del modelo para garantizar un funcionamiento óptimo.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Resultado Esperado</h2>
+            <div class="highlight">
+                <p>El modelo estará en funcionamiento en un entorno controlado de producción, accesible para el personal autorizado, generando predicciones de riesgo en tiempo real y brindando valor clínico y operativo. Se garantizará su mantenibilidad, escalabilidad y capacidad de mejora continua.</p>
+            </div>
+        </div>
+    </main>
+
+    <a href="/" class="volver">⬅️ Volver al Menú</a>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Proyecto Zipaquirá. Todos los derechos reservados.</p>
+            <p>Desarrollado por: MANUEL FELIPE MURCIA SUÁREZ<br>
+            Universidad de Cundinamarca<br>
+            Ingeniería de Sistemas</p>
+        </div>
+    </footer>
+</body>
+</html>

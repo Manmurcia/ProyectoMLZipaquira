@@ -69,6 +69,10 @@ def crear_app():
         except Exception as e:
             return f"Error: {str(e)}", 500
     
+    @app.route("/fase5")
+    def fase5():
+        return render_template("Fase5.html")
+    
     return app
 
 if __name__ == '__main__':
