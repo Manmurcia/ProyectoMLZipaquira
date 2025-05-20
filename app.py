@@ -3,6 +3,7 @@ from ingenieria_datos.creadordataseed import generar_data_seed
 from ingenieria_datos.limpieza_datos import limpiar_y_transformar_dataset
 from ModeloEntrenamiento import entrenar_modelo
 from EvaluarModelo import evaluar_modelo
+from Prediccion import predecir_riesgo
 
 import re
 from datetime import datetime
@@ -72,6 +73,28 @@ def crear_app():
     @app.route("/fase5")
     def fase5():
         return render_template("Fase5.html")
+    
+    @app.route('/predecir', methods=['GET', 'POST'])
+    def predecir():
+        resultado = None
+        error = None
+        if request.method == 'POST':
+            try:
+                datos = {
+                    'edad': int(request.form['edad']),
+                    'sexo': request.form['sexo'],
+                    'comorbilidades': request.form['comorbilidades'],
+                    'uso_leña': int(request.form['uso_leña']),
+                    'tipo_vivienda': request.form['tipo_vivienda'],
+                    'pm25': float(request.form['pm25']),
+                    'consultas_respiratorias': int(request.form['consultas_respiratorias']),
+                    'estrato': int(request.form['estrato']),
+                    'actividad_fisica': int(request.form['actividad_fisica'])
+                }
+                resultado = predecir_riesgo(datos)
+            except Exception as e:
+                error = str(e)
+        return render_template('Prediccion.html', resultado=resultado, error=error)
     
     return app
 

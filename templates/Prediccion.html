@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Prediccion.css') }}">
+    <title>Predicción de Riesgo Respiratorio</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Clasificación de Riesgo de Enfermedades Respiratorias en Adultos Mayores de Zipaquirá</h1>
+            <p>Formulario de Predicción</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="form-container">
+            <form action="/predecir" method="post">
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="60" max="90" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comorbilidades">Comorbilidades:</label>
+                    <select id="comorbilidades" name="comorbilidades" required>
+                        <option value="Ninguna">Ninguna</option>
+                        <option value="Hipertensión">Hipertensión</option>
+                        <option value="Diabetes">Diabetes</option>
+                        <option value="Otras">Otras</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="uso_leña">Uso de leña como combustible:</label>
+                    <select id="uso_leña" name="uso_leña" required>
+                        <option value="0">No</option>
+                        <option value="1">Sí</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo_vivienda">Tipo de vivienda:</label>
+                    <select id="tipo_vivienda" name="tipo_vivienda" required>
+                        <option value="Cerrada">Cerrada</option>
+                        <option value="Ventilada">Ventilada</option>
+                        <option value="Hacinada">Hacinada</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pm25">PM2.5 (μg/m³)(15.3 promedio en Zipaquirá):</label>
+                    <input type="number" id="pm25" name="pm25" step="0.1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="consultas_respiratorias">Consultas respiratorias (último año):</label>
+                    <input type="number" id="consultas_respiratorias" name="consultas_respiratorias" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="estrato">Estrato socioeconómico:</label>
+                    <select id="estrato" name="estrato" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="actividad_fisica">Actividad física semanal:</label>
+                    <select id="actividad_fisica" name="actividad_fisica" required>
+                        <option value="0">No</option>
+                        <option value="1">Sí</option>
+                    </select>
+                </div>
+
+                <button type="submit">Predecir Riesgo</button>
+            </form>
+        </div>
+
+        {% if resultado %}
+        <div class="resultado-container">
+            <h2>Resultado de la Clasificación</h2>
+            <p>
+                <strong>Categoría de riesgo:</strong>
+                <span class="
+                    {% if resultado['categoria_riesgo'] == 'Alto' %}riesgo-alto
+                    {% elif resultado['categoria_riesgo'] == 'Medio' %}riesgo-medio
+                    {% else %}riesgo-bajo{% endif %}
+                ">
+                    {{ resultado['categoria_riesgo'] }}
+                </span>
+            </p>
+            <h3>Probabilidades por categoría:</h3>
+            <ul>
+                {% for cat, prob in resultado['probabilidades'].items() %}
+                <li>
+                    <span style="font-weight: bold;">{{ cat }}:</span>
+                    <span>{{ prob }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="error-container">
+            <p style="color:red;"><strong>Error:</strong> {{ error }}</p>
+        </div>
+        {% endif %}
+
+        <div class="acciones">
+            <a href="/predecir" class="btn">Nueva Evaluación</a>
+        </div>
+
+        <a href="/" class="volver">⬅️ Volver al Menú</a>
+
+        <div class="footer">
+            <p>© 2025 Proyecto Zipaquirá. Todos los derechos reservados.</p>
+            <p>Desarrollado por: MANUEL FELIPE MURCIA SUÁREZ<br>
+            Universidad de Cundinamarca<br>
+            Ingeniería de Sistemas</p>
+        </div>
+    </div>
+</body>
+</html>
